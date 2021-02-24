@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<link href="css/styles.css" rel="stylesheet">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+</head>
+<body>
+    <div class="calculator">
+        <div class="calculator-body">
+            <div class="calculator-output">
+                <input id="calculatorOutput" type="text" class="output" disabled value="">
+            </div>
+            <div class="calculator-buttons">
+                <button data-clr>CLR</button>
+                <button data-op value="(">(</button>
+                <button data-op value=")">)</button>
+                <button data-op value="/">÷</button>
+                <button data-num value="7">7</button>
+                <button data-num value="8">8</button>
+                <button data-num value="9">9</button>
+                <button data-op value="*">×</button>
+                <button data-num value="4">4</button>
+                <button data-num value="5">5</button>
+                <button data-num value="6">6</button>
+                <button data-op value="-">-</button>
+                <button data-num value="1">1</button>
+                <button data-num value="2">2</button>
+                <button data-num value="3">3</button>
+                <button data-op value="+">+</button>
+                <button data-num value="0">0</button>
+                <button data-num value=".">.</button>
+                <button data-eq class="equal">=</button>
+            </div>
+        </div>
+    </div>
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script type="module" src="js/Calculator.js"></script>
+</body>
+</html>
