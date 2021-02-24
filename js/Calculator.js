@@ -242,7 +242,6 @@ class Calculator {
         while (stack.length > 0) {
             output.push(stack.pop());
         }
-
         return output.filter(Boolean);
     };
 
@@ -266,10 +265,8 @@ class Calculator {
     };
 
     calculateResult = (equationTokens) => {
-
         equationTokens = equationTokens.reverse();
         let stack = [];
-
         while (equationTokens.length > 0) {
             let token = equationTokens.pop();
             if (/[^+\-/*]/.test(token)) {
@@ -300,14 +297,11 @@ class Calculator {
         this.clear();
         if(this.equation.length) {
             const equationTokens = calculator.parseEquation(this.equation);
-            console.log("eqt",equationTokens)
-
             if (equationTokens === "Error")
                 calculator.displayError("Syntax");
             else {
                 const output = calculator.performShuntingYard(equationTokens);
                 const answer = calculator.calculateResult(output);
-                console.log(answer);
                 if(answer === 'Error') {
                     calculator.displayError("Calculation");
                 }
@@ -320,9 +314,7 @@ class Calculator {
     };
     displayAnswer = (answer) => {
         answer = answer.toString();
-
         this.clearOutput();
-
         $('#calculatorOutput').val(answer);
         this.equationFormatted = answer;
         this.equation = answer;
